@@ -1,0 +1,14 @@
+graph TD
+    A[Producteurs] --> B[raw_weather_data]
+    A --> C[station_data]
+    A --> D[satellite_data]
+    A --> E[radar_data]
+    
+    B --> F[Spark Streaming]
+    C --> F
+    D --> F
+    E --> F
+    
+    F --> G[processed_weather_data]
+    
+    G --> H[Consommateurs]

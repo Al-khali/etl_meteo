@@ -1,0 +1,31 @@
+graph TD
+    A[Collecteur de données principal]
+    B[API Connector]
+    C[Station Connector]
+    D[Satellite Connector]
+    E[Radar Connector]
+    F[Bouée Connector]
+    G[Station Perso Connector]
+
+    A --> B
+    A --> C
+    A --> D
+    A --> E
+    A --> F
+    A --> G
+
+    B --> H[API Parser]
+    C --> I[Station Data Parser]
+    D --> J[Satellite Data Parser]
+    E --> K[Radar Data Parser]
+    F --> L[Bouée Data Parser]
+    G --> M[Station Perso Parser]
+
+    H --> N[Kafka Producer]
+    I --> N
+    J --> N
+    K --> N
+    L --> N
+    M --> N
+
+    N --> O[Kafka Topic: raw_weather_data]

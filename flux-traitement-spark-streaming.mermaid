@@ -1,0 +1,7 @@
+graph LR
+    A[Kafka] -->|Consommation| B[Spark Streaming]
+    B -->|Parsing| C[Nettoyage des données]
+    C -->|Transformation| D[Agrégation]
+    D -->|Analyse| E[Détection d'anomalies]
+    E -->|Résultats| F[Stockage/Visualisation]
+    G[Données historiques] -.->|Enrichissement| C

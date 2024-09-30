@@ -1,0 +1,12 @@
+graph TD
+    A[Données brutes] --> B[Nettoyage]
+    B --> C[Normalisation]
+    C --> D[Agrégation]
+    D --> E[Calcul de statistiques]
+    E --> F[Détection d'anomalies]
+    E --> G[Prévisions court terme]
+    E --> H[Calcul d'indices]
+    F --> I[Alertes]
+    G --> J[Rapports]
+    H --> J
+    J --> K[Stockage/Visualisation]

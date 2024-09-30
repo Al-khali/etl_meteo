@@ -1,0 +1,8 @@
+graph LR
+    A[Sources de données] -->|API| B[Apache Kafka]
+    A -->|Stations météo| B
+    A -->|Satellites| B
+    B -->|Flux de données| C[Spark Streaming]
+    C -->|Transformation| D[Traitement en temps réel]
+    D -->|Données traitées| E[Base de données]
+    E -->|Accès aux données| F[Analyse et Visualisation]
